@@ -1,0 +1,31 @@
+.iconBox {
+    cursor: pointer;
+    margin-right: 5px;
+    height: 70px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #fff;
+    border: 2px solid #d8d7d9;
+    animation: s .5s;
+    border-radius: 3px;
+    width: 70px;
+}
+
+.iconBox:hover {
+    border: 2px solid #f5c1bc;
+}
+
+.faIcon {
+    font-size: 45px;
+}
+
+.removeLink {
+    margin: 8px 0 0 10px;
+}
+.removeLink:hover > a {
+    color: #f5c1bc;
+}

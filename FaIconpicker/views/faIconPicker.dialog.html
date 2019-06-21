@@ -1,0 +1,26 @@
+<div class="bgpicker-dialog" ng-controller="muyaFaIconPicker.Dialog.Controller">
+    <div class="umb-control-group">
+        <div class="form-search">
+            <i class="icon-search"></i>
+            <input type="text"
+                   style="width: 100%"
+                   ng-model="searchTerm"
+                   class="umb-search-field search-query input-block-level"
+                   localize="placeholder"
+                   placeholder="@placeholders_filter"
+                   umb-auto-focus
+                   no-dirty-check>
+        </div>
+    </div>
+    <div class="umb-control-group">
+        <ul class="umb-iconpicker">
+            <li class="umb-iconpicker-item" ng-repeat="icon in filtered = (model.icons | filter: searchTerm) track by $index">
+                <a href="#" title="{{icon}}" ng-click="model.pickIcon(icon)" prevent-default ng-bind-html="model.render(icon)"></a>
+            </li>
+        </ul>
+    </div>
+    <umb-empty-state ng-if="filtered.length === 0 "
+                        position="center">
+        <localize key="defaultdialogs_noIconsFound">No icons were found.</localize>
+    </umb-empty-state>
+</div>
